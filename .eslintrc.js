@@ -18,19 +18,20 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
+    'max-classes-per-file': 'off', // Added rule
+    'no-underscore-dangle': 'off', // Added rule
     'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': [
       'error',
       'LabeledStatement',
       'WithStatement',
-
     ],
   },
   overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    }
-  ]
+    },
+  ],
 };
